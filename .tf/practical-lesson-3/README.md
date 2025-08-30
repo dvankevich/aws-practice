@@ -27,7 +27,7 @@ VPC, EC2-інстанси, секʼюріті-групи, RDS ми вже ств
      - Згенерувати статичні ресурси за допомогою `python manage.py collectstatic`
      - Створити архів (приклад для Linux та MacOS, з віндою не працюю принципово):
        ```bash
-       zip -r ../django_app.zip . -x '.venv/*' '.git/*' '*__pycache__*'
+       zip -r ../django_app.zip .ebextensions django_app manage.py polls requirements.txt static -x '*__pycache__*'
        ```
        ⚠️ Зверніть увагу на те, що архів створюється на директорію вище ⚠️
    - Завантажити архів до S3
